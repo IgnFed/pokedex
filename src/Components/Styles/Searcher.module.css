@@ -1,0 +1,14 @@
+.sectionSearcherButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divSearcherButtonsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

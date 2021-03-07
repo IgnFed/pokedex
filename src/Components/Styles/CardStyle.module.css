@@ -1,0 +1,273 @@
+.allContentCardContainer {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 112%;
+  min-width: 500px;
+  max-width: 112%;
+  height: 430px;
+  min-height: 300px;
+  max-height: 430px;
+  border: 2px solid azure;
+
+  background: linear-gradient(to left, #f5f5dc, #648fdf);
+  overflow: hidden;
+  resize: both;
+}
+
+::-webkit-resizer {
+  border-radius: 30px;
+  border: 9px solid rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  border-right-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+  box-shadow: 0 0 5px 3px rgba(255, 0, 0, 0.1);
+}
+
+.cardContainer {
+  position: absolute;
+  background-image: url('https://maxcdn.icons8.com/Share/icon/color/Gaming/pokeball1600.png');
+  background-size: 50% 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: background-size 1s;
+}
+
+.containerImage {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  float: left;
+
+  overflow: hidden;
+}
+
+.containerImage img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.containerImage::before {
+  content: '';
+  position: absolute;
+  background-color: #648fdf;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.containerImage::after {
+  content: '';
+  position: absolute;
+  background-color: #f5f5dc;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
+
+.containerImage span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.containerImage span::before,
+.containerImage span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: red;
+}
+
+.containerImage span::after {
+  bottom: 0;
+}
+
+.containerContent p {
+  position: absolute;
+  min-width: 260px;
+  max-width: 360px;
+  height: fit-content;
+  text-align: start;
+  margin: 5px 0;
+  padding: 5px 0 5px 195px;
+}
+
+.containerContent p.unicType {
+  position: absolute;
+  min-width: 200px;
+  padding: 5px 0 5px 145px !important;
+  max-width: 350px !important;
+  left: 150px;
+  bottom: 60px !important;
+  text-align: start !important;
+}
+
+.containerContent p:not(.bgred) {
+  min-width: 200px;
+  padding: 5px 0 5px 145px;
+  max-width: 350px;
+  left: 150px;
+}
+
+.containerContent p:not(.bgred):nth-child(2) {
+  bottom: 70px;
+}
+.containerContent p:not(.bgred):nth-child(3) {
+  top: 70px;
+}
+
+.containerContent p.bgred {
+  background-color: red;
+}
+
+.containerContent p:last-child {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  min-width: 260px;
+}
+
+@media (max-width: 680px) {
+  .cardContainer {
+    background-image: none;
+  }
+  .allContentCardContainer {
+    width: 90vw;
+    max-width: 90vw;
+    min-width: 90vw;
+    height: 430px;
+    min-height: 300px;
+    max-height: 430px;
+  }
+  .containerImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+
+    overflow: hidden;
+  }
+
+  .containerImage img {
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
+
+  .containerContent p {
+    position: absolute;
+    min-width: 100%;
+    max-width: 100%;
+    height: fit-content;
+    font-size: 21px;
+    margin: 5px auto;
+
+    padding: 0;
+  }
+
+  .containerContent p:not(.bgred):nth-child(2) {
+    bottom: 50px;
+    left: 50%;
+    padding: 5px 0;
+    text-align: center;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .containerContent p:not(.bgred):nth-child(3) {
+    top: 50px;
+    left: 50%;
+    padding: 5px 0;
+    text-align: center;
+    transform: translate(-50%);
+    width: 100%;
+  }
+
+  .containerContent p.unicType {
+    position: absolute !important;
+    bottom: 50px !important;
+    width: 100% !important;
+    left: 50% !important;
+    transform: translate(-50%);
+    padding: 5px 0 !important;
+    text-align: center !important;
+
+    transform: translate(-50%) !important;
+  }
+  .containerContent p:first-child {
+    text-align: center;
+    width: 100%;
+    top: 10px;
+  }
+
+  .containerContent p:last-child {
+    bottom: 12px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+@media (max-width: 395px) {
+  .allContentCardContainer {
+    width: 105%;
+    min-width: 90vw;
+    max-width: 90vw;
+    resize: none;
+  }
+  .containerImage img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+  }
+  .containerContent p {
+    position: absolute;
+    font-size: 20px;
+  }
+
+  .containerContent p:not(.bgred):nth-child(2) {
+    bottom: 60px;
+    left: 50%;
+    padding: 5px 0;
+    text-align: center;
+    transform: translate(-50%);
+    width: 100%;
+  }
+  .containerContent p:not(.bgred):nth-child(3) {
+    top: 60px;
+    left: 50%;
+    padding: 5px 0;
+    text-align: center;
+    transform: translate(-50%);
+    width: 100%;
+  }
+
+  .containerContent p.unicType {
+    position: relative !important;
+    top: 70px !important;
+    left: 50% !important;
+    padding: 5px 0 !important;
+    text-align: center !important;
+
+    transform: translate(-50%) !important;
+  }
+}
