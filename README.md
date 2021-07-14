@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+POKEDEX PAGE >>> https://ignfed.github.io/pokedex/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
